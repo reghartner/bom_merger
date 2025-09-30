@@ -266,7 +266,7 @@ function parseGenericBom(rows) {
       // debugLog("Processing generic row segment", { location, value });
       const parsed = parseGenericRow(location, value, row);
       if (parsed.type === "Unknown") {
-        console.log("⚠️ Could not classify part", { location, value });
+        debugLog("⚠️ Could not classify part", { location, value });
         continue;
       }
       parts.push(parsed);
